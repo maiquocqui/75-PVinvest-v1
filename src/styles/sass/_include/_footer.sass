@@ -1,0 +1,90 @@
+footer
+	background: darken($dblue,20%)
+	margin-top: 40px
+	.footer-top
+		padding: 60px 0
+	.footer-col
+		.title
+			+fs(22rem)
+			color: $white
+			font-family: 'judson'
+			font-weight: 700
+			margin-bottom: 20px
+	.company
+		margin-bottom: 25px
+		figure
+			+flexbox
+			align-items: center
+			align-content: center
+			.logo
+				width: 80px
+				img
+					filter: grayscale(100%) brightness(400%)
+			figcaption
+				width: calc(100% - 80px)
+				padding-left: 20px
+				+fs(24rem)
+				color: $white
+				font-family: 'judson'
+				font-weight: 700
+	.about
+		color: darken($white,40%)
+		+fs(14rem)
+		line-height: 1.8
+	.footer-link
+		a
+			display: block
+			line-height: 1.5
+			padding: 5px 0
+			+fs(13rem)
+			color: darken($white,40%)
+			text-transform: uppercase
+			&:hover
+				color: $white
+	.contact-info
+		ul
+			li
+				color: darken($white,40%)
+				+pos(rel,null)
+				+fs(13rem)
+				padding: 5px 0
+				padding-left: 25px
+				.fa
+					+pos(abs, 6px null null 0)
+					+fs(16rem)
+					color: darken($white,20%)
+				a
+					color: darken($white,40%)
+					&:hover
+						color: $white
+	.footer-bottom
+		border-top: 1px solid color-rgba($white,0.1)
+		.copyright
+			padding: 30px 0
+			color: darken($white,40%)
+			text-align: center
+			+fs(13rem)
+			a
+				color: darken($white,40%)
+				&:hover
+					color: $white
+.up
+	width: 50px
+	height: 50px
+	+flexbox
+	justify-content: center
+	align-items: center
+	background: $white
+	color: $black
+	+fs(20rem)
+	cursor: pointer
+	+pos(fix, null 20px 20px null)
+	z-index: 100
+	+transition(all,0.3s)
+	opacity: 0
+	visibility: hidden
+	&.active
+		opacity: 1
+		visibility: visible
+	&:hover
+		color: $dred

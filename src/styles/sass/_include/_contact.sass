@@ -1,0 +1,40 @@
+.contact-body
+	margin: 80px 0
+.contact-form
+	background: darken($white,5%)
+	padding: 30px 40px
+	margin: 40px 0
+	overflow: hidden
+	+pos(rel,null)
+	&:before
+		content: '\f003'
+		+fs(72rem)
+		+pos(abs, -40px -20px null null)
+		+transform(rotateZ(20deg))
+		color: $dblue
+		opacity: 0.2
+	.form-wrap
+		margin: 0px -10px
+	.form-group
+		padding: 0px 10px
+		// margin-bottom: 20px
+	input, textarea
+		// border: 1px solid darken($white,10%)
+		border: none
+		border-bottom: 1px solid darken($white,20%)
+		padding: 15px 0px
+		+fs(14rem)
+		width: 100%
+		background: none
+		&:hover, &:active, &:focus
+			border-bottom-color: $black
+	.frm-btn
+		padding: 0px 10px
+	input[type="submit"]
+		display: inline-block
+		border: none
+		background: $dred
+		color: $white
+		text-transform: uppercase
+		width: auto
+		padding: 10px 20px

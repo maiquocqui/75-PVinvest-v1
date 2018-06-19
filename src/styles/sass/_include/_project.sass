@@ -1,0 +1,79 @@
+.project-body
+	margin: 40px 0
+.project-list
+	.project-card
+		display: block
+		margin-bottom: 100px
+		color: darken($white,40%)
+		figure
+			+pos(rel,null)
+			+flexbox
+			justify-content: flex-end
+			.project-img
+				width: 80%
+				+pos(rel,null)
+				&:before
+					content: ''
+					+pos(abs, 0 null 0 0)
+					width: 50%
+					background: linear-gradient(to right, color-rgba($white,1), color-rgba($white,0))
+					opacity: 0.5
+					+transition(all,0.5s)
+				img
+					width: 100%
+			figcaption
+				+pos(abs, 0 null null 0)
+				width: 33.33%
+				padding: 20px 0
+				.link
+					font-weight: 300
+					text-transform: uppercase
+					margin-bottom: 50px
+					+fs(13rem)
+					letter-spacing: 1px
+					+transition(all,0.5s)
+				.project-name
+					+fs(60rem)
+					font-family: 'judson'
+					font-weight: 700
+					color: $black
+					margin-bottom: 30px
+					
+					// text-shadow: 10px 10px 1px color-rgba($black,0.1)
+				.project-location
+					+fs(14rem)
+					margin-bottom: 20px
+					color: darken($white,40%)
+					font-weight: 300
+					padding-top: 30px
+					opacity: 0
+					+transition(all,0.5s)
+					&:before
+						content: '\f041'
+						margin-right: 10px
+				.project-des
+					+fs(14rem)
+					line-height: 1.8
+					// font-weight: 300
+					color: darken($white,60%)
+					opacity: 0
+					padding-top: 30px
+					+transition(all,0.5s)
+			&:hover
+				.project-img
+					&:before
+						// width: 30%
+						opacity: 1
+						// background: linear-gradient(to right, color-rgba($white,0.5), color-rgba($white,0))
+				figcaption
+					.link
+						color: $dred
+						// letter-spacing: 2px
+					.project-location
+						padding-top: 0
+						opacity: 1
+						transition-delay: 0.2s
+					.project-des
+						padding-top: 0
+						opacity: 1
+						transition-delay: 0.4s

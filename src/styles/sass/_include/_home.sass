@@ -1,0 +1,40 @@
+.home-title
+.page-title
+	+fs(42rem)
+	font-weight: 700
+	font-family: 'judson'
+	margin-bottom: 40px
+	&:after
+		content: ''
+		display: block
+		width: 60px
+		height: 1px
+		background: $black
+		margin-top: 5px
+.small-title
+	+fs(24rem)
+	font-family: 'judson'
+	font-weight: 700
+	margin-bottom: 20px
+.sidebar-title
+	+pos(rel,null)
+	padding: 10px 0
+	line-height: 1.5
+	margin-bottom: 10px
+	&:after
+		content: ''
+		display: block
+		width: 100%
+		height: 2px
+		background: darken($white,10%)
+		+pos(abs, 45% null null 0)
+
+	span
+		+fs(14rem)
+		text-transform: uppercase
+		font-weight: 500
+		color: $main
+		+pos(rel,null)
+		z-index: 1
+		background: $white
+		padding-right: 15px
